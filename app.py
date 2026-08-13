@@ -226,7 +226,7 @@ def main():
             file_name = uploaded_file.name
             file_type = uploaded_file.type
 
-    # Provider Selection (Reverted to original version)
+    # Provider Selection & Key Inputs
     st.sidebar.markdown("---")
     st.sidebar.subheader("🤖 AI Processing Engine")
 
@@ -240,15 +240,46 @@ def main():
     )
 
     selected_provider = selected_provider_raw.split()[0]
+    user_api_key = None
+
+    # Dynamic API Key Input field when Gemini or OpenAI is selected
+    if selected_provider == "gemini":
+        user_api_key = st.sidebar.text_input(
+            "🔑 Enter Gemini API Key:",
+            value=GEMINI_API_KEY,
+            type="password",
+            help="Paste your Google Gemini API Key here to enable live AI extraction."
+        )
+    elif selected_provider == "openai":
+        user_api_key = st.sidebar.text_input(
+            "🔑 Enter OpenAI API Key:",
+            value=OPENAI_API_KEY,
+            type="password",
+            help="Paste your OpenAI API Key here to enable live AI extraction."
+        )
+
+    # Key Resolution & Active Provider Logic
+    effective_openai_key = user_api_key if selected_provider == "openai" else OPENAI_API_KEY
+    effective_gemini_key = user_api_key if selected_provider == "gemini" else GEMINI_API_KEY
+
     if selected_provider == "auto":
-        selected_provider = active_provider
+        if OPENAI_API_KEY:
+            selected_provider = "openai"
+        elif GEMINI_API_KEY:
+            selected_provider = "gemini"
+        else:
+            selected_provider = "mock"
 
     st.sidebar.caption(f"Active Provider: **{selected_provider.upper()}**")
 
-    if selected_provider == "openai" and not OPENAI_API_KEY:
-        st.sidebar.warning("⚠️ OPENAI_API_KEY environment variable not set. Falling back to Mock Engine.")
-    elif selected_provider == "gemini" and not GEMINI_API_KEY:
-        st.sidebar.warning("⚠️ GEMINI_API_KEY environment variable not set. Falling back to Mock Engine.")
+    active_key = effective_openai_key if selected_provider == "openai" else (effective_gemini_key if selected_provider == "gemini" else None)
+
+    if selected_provider == "openai" and not active_key:
+        st.sidebar.info("💡 Running on **Universal Clinical Parser Engine** (Zero-Dependency Mode). Enter OpenAI key above to use live GPT-4o.")
+    elif selected_provider == "gemini" and not active_key:
+        st.sidebar.info("💡 Running on **Universal Clinical Parser Engine** (Zero-Dependency Mode). Enter Gemini key above to use live Gemini 2.5.")
+    elif selected_provider == "mock":
+        st.sidebar.success("✅ Running on **Universal Clinical Parser Engine**.")
 
     # Main Execution Area
     if file_bytes:
@@ -280,10 +311,11 @@ def main():
             st.subheader("🧠 Structured Clinical Intelligence")
 
             # Process Document Button / Auto Run
-            with st.spinner("Processing document through Clinical AI & Deterministic Risk Engine..."):
+            with st.spinner(f"Processing document through {selected_provider.upper()} & Risk Engine..."):
                 clinical_output: ClinicalSummary = analyze_document(
                     doc_info["text"],
-                    override_provider=selected_provider
+                    override_provider=selected_provider,
+                    api_key=active_key
                 )
 
             # Patient Overview Header Card
