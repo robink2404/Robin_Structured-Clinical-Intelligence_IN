@@ -1,0 +1,27 @@
+EMERGENCY DEPARTMENT PHYSICIAN PROGRESS NOTE
+City General Hospital - ED Section 4
+
+PATIENT: Robert Miller | AGE: 45 | GENDER: Male | MRN: 441029
+
+SUBJECTIVE:
+45-year-old male presents with acute onset sharp left-sided chest pain starting 2 hours ago during exercise. Pain radiates to left shoulder. Accompanied by diaphoresis and mild nausea. Denies fever or cough.
+
+PAST MEDICAL HISTORY:
+Type 2 Diabetes Mellitus, Hypercholesterolemia. No prior cardiac events.
+
+ALLERGIES: No Known Drug Allergies (NKDA).
+
+OBJECTIVE / PHYSICAL EXAM:
+Vitals: BP 154/96 mmHg | HR 102 bpm | RR 22/min | SpO2 96% on room air | Temp 98.6 F
+Cardiovascular: Tachycardic, regular rhythm, S1/S2 present, no murmurs.
+Lungs: Clear to auscultation bilaterally.
+
+ASSESSMENT:
+1. Acute Chest Pain - Rule out Acute Coronary Syndrome (ACS) vs Severe Muscle Strain.
+2. Uncontrolled Hypertension.
+
+PLAN & NEXT STEPS:
+1. STAT 12-lead ECG and serial Troponin I lab draws at 0 and 3 hours.
+2. Aspirin 325 mg chewed immediately.
+3. Sublingual Nitroglycerin as needed for chest discomfort.
+4. Cardiology consultation requested.

@@ -1,0 +1,25 @@
+OUTPATIENT LABORATORY DIAGNOSTICS REPORT
+Metro Diagnostic Laboratories
+Report ID: LAB-2024-88419
+
+PATIENT INFORMATION
+Name: Jane Smith
+Age: 52 | Gender: Female | DOB: 05/12/1972
+Ordering Physician: Dr. Robert Vance, MD
+
+COMPLETE BLOOD COUNT (CBC) & METABOLIC PANEL
+Test Name           Result      Units     Reference Range   Status
+------------------------------------------------------------------
+WBC Count           16.8        K/uL      4.5 - 11.0        HIGH
+RBC Count           4.10        M/uL      4.00 - 5.20       NORMAL
+Hemoglobin          9.4         g/dL      12.0 - 16.0       LOW
+Hematocrit          29.5        %         36.0 - 46.0       LOW
+Platelets           240         K/uL      150 - 450         NORMAL
+Glucose (Fasting)   142         mg/dL     70 - 99           HIGH
+C-Reactive Protein  94.5        mg/L      0.0 - 5.0         CRITICAL
+
+ALLERGY PROFILE
+- Sulfa Drugs: Documented Moderate Anaphylactoid Reaction
+
+PHYSICIAN IMPRESSION
+Marked leukocytosis and systemic inflammatory markers with moderate normocytic anemia and fasting hyperglycemia. Urgent clinical correlation required.

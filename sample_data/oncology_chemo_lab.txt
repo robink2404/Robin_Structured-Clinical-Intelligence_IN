@@ -1,0 +1,30 @@
+HOPE CANCER CENTER - LAB & CHEMOTHERAPY MONITORING REPORT
+Date: November 10, 2024 | Department: Hematology / Oncology
+
+PATIENT INFORMATION
+Name: Eleanor Rigby
+Age: 62 | Gender: Female | MRN: ONC-774102
+Attending Oncologist: Dr. Marcus Vance, MD
+
+CLINICAL CONTEXT
+Day 10 Post-Cycle 3 Chemotherapy (AC-T regimen for Stage II Breast Cancer). Patient reports fatigue, chills, and oral mucositis.
+
+LABORATORY RESULTS (STAT CBC & DIFFERENTIAL)
+Test Name                 Result      Units     Reference Range   Status
+------------------------------------------------------------------------
+WBC Count                 1.8         K/uL      4.0 - 11.0        CRITICAL LOW
+Absolute Neutrophils(ANC) 450         /uL       1500 - 8000       CRITICAL LOW
+Platelet Count            45          K/uL      150 - 450         CRITICAL LOW
+Hemoglobin (Hb)           8.2         g/dL      12.0 - 16.0       LOW
+Hematocrit                24.5        %         36.0 - 46.0       LOW
+Temperature               101.4       F         97.0 - 99.0       HIGH
+
+ONCOLOGY IMPRESSION & RISK FLAGS
+1. FEBRILE NEUTROPENIA (ANC < 500 /uL + Temp > 101 F): HIGH RISK FOR SEVERE INFECTION.
+2. THROMBOCYTOPENIA (Platelets 45 K/uL): HIGH BLEEDING RISK.
+3. MODERATE CHEMOTHERAPY-INDUCED ANEMIA (Hb 8.2 g/dL).
+
+RECOMMENDED URGENT ACTIONS
+1. STAT Admission to Inpatient Oncology Unit for IV empiric broad-spectrum antibiotics (Cefepime).
+2. Filgrastim (G-CSF) 300 mcg SC daily injection to stimulate neutrophil recovery.
+3. Hold next chemotherapy cycle until ANC > 1500 /uL and Platelets > 100 K/uL.

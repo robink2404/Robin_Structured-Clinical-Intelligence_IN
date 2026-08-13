@@ -1,0 +1,32 @@
+SUNSHINE PEDIATRIC URGENT CARE NOTE
+Date: November 05, 2024 | Department: Pediatrics
+
+PATIENT DEMOGRAPHICS
+Name: Tommy Vance
+Age: 6 | Gender: Male | Weight: 22 kg | MRN: PED-44102
+Parent/Guardian: Lisa Vance (Mother)
+
+CHIEF COMPLAINT & HISTORY OF PRESENT ILLNESS
+6-year-old male brought in by mother with severe right ear pain (otalgia), pulling at ear, irritability, and high fever (103.1 F) for 48 hours. Reduced oral intake.
+
+ALLERGIES
+Peanuts (Severe Anaphylaxis - carries EpiPen)
+No Known Drug Allergies (NKDA)
+
+PHYSICAL EXAMINATION
+Vitals: Temp 103.1 F | HR 122 bpm | RR 26/min | SpO2 98% room air
+ENT: Right tympanic membrane is bulging, erythematous, with clouding and purulent fluid behind membrane. Left TM clear.
+Oropharynx: Moist mucous membranes, no exudates.
+
+LABORATORY FINDINGS
+- WBC Count: 18.5 K/uL (Reference Range: 4.5 - 13.5 K/uL for pediatrics) [HIGH]
+- C-Reactive Protein (CRP): 42.0 mg/L (Reference Range: 0.0 - 5.0 mg/L) [HIGH]
+
+ASSESSMENT / DIAGNOSIS
+1. Acute Suppurative Otitis Media (Right Ear)
+2. High-grade Pediatric Pyrexia
+
+DISCHARGE MEDICATIONS & PLAN
+1. Amoxicillin-Clavulanate (Augmentin) 600 mg/5 mL suspension: 9 mL PO twice daily for 10 days.
+2. Children's Ibuprofen 100 mg/5 mL: 10 mL PO every 6 hours as needed for fever/pain.
+3. Strict instructions: Avoid all peanut products. Follow up with Pediatrician in 5 days.

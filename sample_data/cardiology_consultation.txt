@@ -1,0 +1,38 @@
+ST. VINCENT CARDIOLOGY CONSULTATION REPORT
+Date: November 02, 2024 | Location: Cardiac Care Unit (CCU)
+
+PATIENT DEMOGRAPHICS
+Name: Michael Chang
+Age: 58 | Gender: Male | MRN: CCU-882194
+Consulting Physician: Dr. Sarah Jenkins, MD (Cardiology)
+
+REASON FOR CONSULTATION
+STAT Cardiology evaluation for acute onset substernal chest pressure (8/10 severity) radiating to jaw, accompanied by diaphoresis and dyspnea.
+
+PAST MEDICAL HISTORY
+1. Type 2 Diabetes Mellitus (15 years)
+2. Hyperlipidemia
+3. Coronary Artery Disease (s/p PCI with drug-eluting stent in 2020)
+
+ALLERGIES
+Sulfa Drugs (Anaphylaxis documented in 2016)
+
+VITAL SIGNS & CLINICAL EXAM
+BP: 168/98 mmHg | HR: 110 bpm | RR: 24/min | SpO2: 93% on room air | Temp: 98.8 F
+
+STAT LABORATORY & DIAGNOSTIC FINDINGS
+- Cardiac Troponin I: 0.85 ng/mL (Reference Range: 0.00 - 0.04 ng/mL) [CRITICAL HIGH]
+- Glucose (Fasting): 210 mg/dL (Reference Range: 70 - 99 mg/dL) [HIGH]
+- B-Type Natriuretic Peptide (BNP): 680 pg/mL (Reference Range: <100 pg/mL) [HIGH]
+- ECG: 2mm ST-segment elevation in leads V2-V4 consistent with Acute Anterior STEMI.
+
+DISCHARGE / TRANSFER MEDICATIONS
+1. Aspirin 325 mg PO immediately
+2. Heparin IV drip protocol
+3. Atorvastatin 80 mg PO daily
+4. Trimethoprim-Sulfamethoxazole (Bactrim) DS 1 tab PO daily (Note: Check allergy profile)
+
+RECOMMENDED NEXT STEPS & CLINICAL PLAN
+1. Emergency Cardiac Catheterization / Primary PCI immediately.
+2. Transfer to Cardiac Intensive Care Unit (CICU).
+3. Contraindication alert: Cancel Bactrim prescription due to severe Sulfa allergy.
