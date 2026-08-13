@@ -3,6 +3,7 @@
 **Project Title:** Clinical Document Intelligence Hub  
 **Speaker:** Developer / Presenter  
 **Target Duration:** 3 Minutes (180 Seconds)  
+**Live AI Provider Used:** Google Gemini 2.5 Flash API  
 
 ---
 
@@ -10,47 +11,73 @@
 
 | Time | Slide / Screen | Core Message / Talking Points |
 | :--- | :--- | :--- |
-| **0:00 - 0:30** | Slide 1 (Problem) | **Context & Problem Statement**: "Healthcare providers spend thousands of hours manually reading unstructured discharge summaries and lab reports. Data extraction is slow, inconsistent, and error-prone." |
-| **0:30 - 1:00** | Slide 2 (Architecture) | **Architecture & Hybrid Design**: "We built a solution using PyMuPDF for document parsing, LLM prompt engineering with Pydantic for structured JSON extraction, and a deterministic safety risk engine for critical lab thresholds and drug allergy checks." |
-| **1:00 - 2:15** | Live App Demo (`app.py`) | **Live System Walkthrough**: Upload document, showcase Patient Card, highlight 🔴 High Risk Flags with confidence scores (99%) & evidence quotes, point out Lab Results table, and demonstrate 1-click JSON export. |
-| **2:15 - 2:45** | Slide 4 (Challenges) | **Key Technical Decisions & Trade-offs**: "We deliberately didn't delegate every decision to the LLM. We combined LLMs for unstructured narrative parsing with deterministic code rules for high-stakes medical thresholds to prevent hallucination." |
-| **2:45 - 3:00** | Slide 5 (Next Steps) | **Conclusion & Roadmap**: "Our prototype is ready out-of-the-box. Next steps include FHIR R4 interoperability, EHR integration with Epic/Cerner, and clinician review workflows." |
+| **0:00 - 0:35** | Slide 1 (Problem & Context) | **Healthcare Manual Burden**: "Clinicians and admin teams spend thousands of hours manually reviewing unstructured clinical notes. Extraction is slow, error-prone, and inconsistent." |
+| **0:35 - 1:05** | Slide 2 (Architecture & Hybrid AI) | **System Workflow**: "Our solution ingests PDFs, TXTs, or Images, uses Google Gemini LLM API with Pydantic schema validation, and passes extracted facts through a deterministic safety risk engine." |
+| **1:05 - 2:20** | Live Streamlit Dashboard (`http://localhost:8501`) | **Live Gemini Demo Walkthrough**: Select **Gemini AI Provider**, enter **Gemini API Key**, upload Discharge Summary PDF, highlight **John Carter**'s card, **Risk Flags** with confidence & evidence quotes, **Diagnoses & Meds**, **Lab Table**, and **Raw JSON**. |
+| **2:20 - 2:45** | Slide 4 (Challenges & Scoping) | **Safety & Hybrid Precision**: "We combined LLM semantic extraction for narrative text with deterministic Python code rules for hard lab thresholds and allergy contraindications." |
+| **2:45 - 3:00** | Slide 5 (Conclusion & Next Steps) | **Roadmap**: "The prototype is zero-downtime and evaluation-ready. Next steps include FHIR R4 API integration, Epic/Cerner EHR connectivity, and clinician review workflows." |
 
 ---
 
-## 📜 Full Script Transcript
+## 📜 Full Presentation Script Transcript
 
-### 🎙️ [0:00 - 0:30] Introduction & Problem
-> "Hello everyone. Today I'm presenting the **Clinical Document Intelligence Hub** — an AI prototype designed to solve a critical operational bottleneck in healthcare.
-> 
-> Healthcare providers spend significant time manually reviewing patient documents — intake forms, discharge summaries, and lab reports — to extract key information. This manual process is slow, inconsistent, and prone to costly clinical errors."
+### 🎙️ [0:00 - 0:35] Introduction & Problem Statement
+*(Screen showing Slide 1: Problem Understanding & Objective)*
 
-### 🎙️ [0:30 - 1:00] Solution Architecture
-> "To address this, we developed a working end-to-end prototype.
+> "Hello everyone. Today I am presenting the **Clinical Document Intelligence Hub** — an AI prototype designed to streamline unstructured clinical document processing in healthcare.
 > 
-> Our system architecture follows a clean pipeline: Unstructured documents in PDF, Image, or Text format are ingested via PyMuPDF. The text is processed by a Clinical LLM constrained strictly by Pydantic JSON schemas. 
-> 
-> Crucially, extracted facts are then passed through a **Deterministic Risk Engine** that checks laboratory thresholds — such as WBC count above 11 — and flags critical safety contraindications, like prescribing Penicillin antibiotics to a patient with a documented Penicillin allergy."
+> Healthcare providers and administrative staff spend significant time manually reviewing patient documents — intake forms, discharge summaries, and lab reports — to extract key information. This manual review is slow, inconsistent, and prone to clinical errors. Our objective is to transform this fragmented data into decision-ready, structured intelligence within seconds."
 
-### 🎙️ [1:00 - 2:15] Live Application Demo
-> *(Switch screen to active Streamlit application at `http://localhost:8501`)*
-> 
-> "Let's see the application in action.
-> 
-> On the left, we can load a sample **Inpatient Discharge Summary PDF**. On the right, the Clinical Intelligence Dashboard immediately extracts structured patient data — John Doe, 67, Male, MRN 984210.
-> 
-> Under **Risk Flags**, notice how the system flags two critical warnings: First, Leukocytosis with 99% confidence, supported by the exact evidence quote from the document: *'WBC Count: 15.2 K/uL'*. Second, a **CRITICAL Drug-Allergy Warning** because Amoxicillin was prescribed to a Penicillin-allergic patient.
-> 
-> In the **Lab Findings** tab, lab values are automatically formatted with reference ranges and HIGH/LOW badges. Finally, under **Executive Summary**, the system generates an actionable, decision-ready next step for the clinical team."
+---
 
-### 🎙️ [2:15 - 2:45] Technical Highlights & Challenges
-> "One of our key architectural decisions was implementing a **hybrid reasoning model**.
+### 🎙️ [0:35 - 1:05] Solution Architecture & Design Flow
+*(Screen showing Slide 2: Solution Architecture & Design Flow)*
+
+> "To solve this challenge, we built a hybrid AI processing pipeline.
 > 
-> We used the LLM for semantic extraction of unstructured narrative text, but used deterministic Python code for high-stakes medical rules. This guarantees predictable, non-hallucinated alerts for critical lab values and drug safety checks. 
+> The application ingests clinical documents in PDF, TXT, or Image format. The text is processed by a Clinical LLM API — such as **Google Gemini 2.5** — strictly constrained by validated Pydantic JSON schemas. 
 > 
-> To ensure total auditability, every extracted risk flag includes source text evidence quotes and confidence scores."
+> Crucially, extracted clinical facts are then evaluated by a **Deterministic Risk Engine** that checks laboratory thresholds — like WBC count over 11.0 or CRP over 10 — and flags safety contraindications, such as drug-allergy overlaps."
+
+---
+
+### 🎙️ [1:05 - 2:20] Live Application Demo (Google Gemini AI)
+*(Switch screen to active Streamlit application at `http://localhost:8501`)*
+
+> "Now, let's see the application operating live in real-time.
+> 
+> In the sidebar under **AI Processing Engine**, I select **Gemini (Google Gemini 2.5)** as our active provider and enter our **Gemini API Key**.
+> 
+> Next, I upload an inpatient **Discharge Summary PDF**. As soon as processing completes, the **Structured Clinical Intelligence Dashboard** populates:
+> 
+> 1. **Patient Card**: Instantly surfaces **John Carter**, a **67-year-old male**, MRN **SYN-1001**.
+> 
+> 2. **Risk Flags Tab**: Notice the high-priority risk callouts:
+>    - 🔴 **[HIGH] Penicillin allergy** *(100% Confidence)* with exact source evidence: *'Penicillin — rash reported previously'*.
+>    - 🔴 **[HIGH] Leukocytosis (Elevated WBC: 15.2 K/uL)** *(99% Confidence)* flagged by the **Deterministic Rule Engine**.
+>    - 🔴 **[HIGH] Severe Systemic Inflammation (CRP: 82 mg/L)** *(99% Confidence)*.
+>    - 🟠 **[MEDIUM] Mild hypoxemia on room air** *(90% Confidence)* supported by *'Oxygen Saturation 93% on room air'*.
+> 
+> 3. **Diagnoses & Meds Tab**: Surfaces confirmed diagnoses of **Community Acquired Pneumonia** and **Hypertension**, allergy warning for **Penicillin**, and prescribed meds: **Azithromycin 500 mg**, **Paracetamol 500 mg**, and **Amlodipine 5 mg**.
+> 
+> 4. **Lab Findings Tab**: Formats extracted lab values cleanly in a table showing **WBC 15.2 K/uL [HIGH]**, **CRP 82 mg/L [HIGH]**, **Oxygen Saturation 93% [LOW]**, **Hemoglobin 13.4 g/dL**, and **Creatinine 1.0 mg/dL**.
+> 
+> 5. **Raw JSON Tab**: Provides 1-click export of the validated Pydantic JSON payload for downstream EHR integration."
+
+---
+
+### 🎙️ [2:20 - 2:45] Technical Highlights & Challenges
+*(Screen showing Slide 4: Challenges & Learnings)*
+
+> "A major architectural decision was our **hybrid reasoning model**.
+> 
+> We used the LLM for flexible narrative text extraction and evidence quotes, but paired it with deterministic Python code rules for high-stakes medical thresholds. This guarantees zero hallucination for critical laboratory alerts. Every risk flag includes exact evidence quotes and confidence scores for total clinical auditability."
+
+---
 
 ### 🎙️ [2:45 - 3:00] Conclusion & Roadmap
-> "Our prototype includes multi-provider support for OpenAI, Google Gemini, and a zero-dependency fallback engine that runs offline out-of-the-box. 
+*(Screen showing Slide 5: Demo Summary & Next Steps)*
+
+> "Our prototype features multi-provider support for OpenAI, Google Gemini, and an offline fallback engine.
 > 
-> Future enhancements include FHIR R4 API integration, EHR connectivity with Epic and Cerner, and clinician sign-off workflows. Thank you!"
+> Strategic next steps include FHIR R4 API export, direct EHR connectivity with Epic and Cerner, and clinician sign-off review loops. Thank you!"
